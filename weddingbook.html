@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your choices | Wedding & Workshop Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex space-x-7">
+                    <a href="index.html" class="flex items-center py-4 px-2">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86040342-0771-449a-ba7c-b487cec6c19e.png" alt="Elegant Occasions logo with intertwined wedding rings" class="h-8 w-8 mr-2">
+                        <span class="font-semibold text-gray-700 text-lg">Your choices</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="py-4 px-2 text-indigo-600 border-b-4 border-indigo-600 font-semibold">home</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="weddings" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Wedding Packages</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
+                    <!-- Package 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8f4e05e6-c44d-42b1-ae75-3a03faedf5f1.png" alt="Intimate wedding ceremony with close family in a garden setting" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Normal wedding</h3>
+                            <p class="text-gray-600 mb-4">Perfect for small gatherings up to 100 guests</p>
+                            <ul class="mb-6 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Ceremony & reception coordination
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Basic floral arrangements
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Photography (4 hours)
+                                </li>
+                            </ul>
+                            <div class="mb-4">
+                                <span class="text-2xl font-bold text-gray-800">$5,999</span>
+                                <span class="text-gray-500 text-sm ml-1">+ tax</span>
+                            </div>
+                            <button onclick="openWeddingModal('Intimate Bliss')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular Package -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden border-2 border-indigo-500 transition-all card-hover relative">
+                        <div class="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg">MOST POPULAR</div>
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e865ed8-b6c2-41ce-8eee-2d5da146bc1b.png" alt="Elegant wedding reception with a large bridal party and beautiful table settings" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Grand Celebration</h3>
+                            <p class="text-gray-600 mb-4">For weddings up to 200 guests</p>
+                            <ul class="mb-6 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Full planning & coordination
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Premium floral designs
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Photography & videography (8 hours)
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    DJ and dance floor
+                                </li>
+                            </ul>
+                            <div class="mb-4">
+                                <span class="text-2xl font-bold text-gray-800">$12,999</span>
+                                <span class="text-gray-500 text-sm ml-1">+ tax</span>
+                            </div>
+                            <button onclick="openWeddingModal('Grand Celebration')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bad93652-209a-4c96-82b3-124b1d60476b.png" alt="Luxury wedding venue with premium decorations and large chandelier" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Luxury Wedding</h3>
+                            <p class="text-gray-600 mb-4">Unforgettable luxury for up to 500 guests</p>
+                            <ul class="mb-6 space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Full concierge wedding planning
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Premium photography team
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Live band & entertainment
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Luxury transportation
+                                </li>
+                            </ul>
+                            <div class="mb-4">
+                                <span class="text-2xl font-bold text-gray-800">$24,999</span>
+                                <span class="text-gray-500 text-sm ml-1">+ tax</span>
+                            </div>
+                            <button onclick="openWeddingModal('Royal Experience')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div id="weddingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center border-b pb-4">
+                        <h3 class="text-2xl font-bold text-gray-800" id="weddingModalTitle">Book Wedding Package</h3>
+                        <button onclick="closeModal('weddingModal')" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <form id="weddingForm" class="mt-6">
+                        <input type="hidden" id="weddingPackage" name="weddingPackage">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="weddingDate">Wedding Date</label>
+                                <input type="date" id="weddingDate" name="weddingDate" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="guestCount">Number of Guests</label>
+                                <input type="number" id="guestCount" name="guestCount" min="1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label class="block text-gray-700 mb-2" for="location">Preferred Location</label>
+                            <input type="text" id="location" name="location" placeholder="City or venue name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Additional Services</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="videography" class="rounded text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Videography (+$1,200)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="dayOfCoordinator" class="rounded text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Day-of Coordinator (+$800)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="premiumBar" class="rounded text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-gray-700">Premium Bar Service (+$2,500)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-8 border-t pt-6 flex justify-end space-x-4">
+                            <button type="button" onclick="closeModal('weddingModal')" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                                Cancel
+                            </button>
+                            <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
+                                Confirm Booking
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+        // Modal Functions
+        function openWeddingModal(packageName) {
+            document.getElementById('weddingPackage').value = packageName;
+            document.getElementById('weddingModalTitle').textContent = `Book ${packageName} Package`;
+            document.getElementById('weddingModal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        function showConfirmation(title, message) {
+            document.getElementById('confirmationTitle').textContent = title;
+            document.getElementById('confirmationMessage').textContent = message;
+            document.getElementById('confirmationModal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+         // Form Submissions
+        document.getElementById('weddingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const packageName = document.getElementById('weddingPackage').value;
+            const weddingDate = document.getElementById('weddingDate').value;
+            closeModal('weddingModal');
+            showConfirmation('Booking Confirmed', `Your ${packageName} for ${new Date(weddingDate).toLocaleDateString()} has been booked successfully! We'll contact you shortly with more details.`);
+        });
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            const menu = document.querySelector('.hidden.md\\:flex');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'flex-col', 'p-4', 'space-y-4', 'z-50');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'flex-col', 'p-4', 'space-y-4', 'z-50');
+            }
+        });
+        </script>
+    </body>
+     <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Elegant Occasions</h3>
+                    <p class="text-gray-300">
+                        Making your special moments unforgettable through expert planning and education.
+                    </p>
+                    <div class="flex mt-6 space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#weddings" class="text-gray-300 hover:text-white">Weddings</a></li>
+                        <li><a href="#workshops" class="text-gray-300 hover:text-white">Workshops</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>123 Event Street, Windsor, ON</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(519) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@elegantoccasions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to get updates on new workshops and wedding planning tips.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 Elegant Occasions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</html>

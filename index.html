@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">EventSys</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#Our Event Categories">Events</a></li>
+                    <li><a href="#about eventsys">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="auth/login.php">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Manage Your Special Events</h1>
+            <p>Weddings & Workshops - We handle it all with care and professionalism</p>
+         
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 flex flex-col mb-10 md:mb-0 items-start">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 text-gray-800">
+                        Create Memories,<br>
+                        <span class="text-indigo-600">Book with Ease</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-gray-600">
+                        Your one-stop platform for wedding reservations and creative workshops. Plan, book, and celebrate life's special moments.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#weddings" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                            Book a Wedding
+                        </a>
+                        <a href="#workshops" class="bg-white hover:bg-gray-100 text-indigo-600 font-bold py-3 px-6 border-2 border-indigo-600 rounded-full transition duration-300">
+                            Explore Workshops
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1471014f-ffb6-4bc5-9819-c2080db399b9.png" alt="Happy couple getting married in a beautiful outdoor venue with floral decorations" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section><script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Event Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Our Event Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="window.location.href='wedding-book.php'" style="cursor: pointer;">
+                    <img src="assets/images/12345.jpg" alt="Wedding">
+                    <h3>Weddings</h3>
+                    <p>Create unforgettable wedding experiences</p>
+                </div>
+
+                <div class="category-card" style="cursor: pointer;" onclick="window.location.href='workshop-book.php'">
+                    <img src="assets/images/wrkshp.jpg" alt="workshop">
+                    <h3>Workshops</h3>
+                    <p>Create unforgettable workshop experiences</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>EventSys</h3>
+                    <p>Professional event management for all occasions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="events.php">Events</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Event St, City</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@eventsys.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 EventSys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
