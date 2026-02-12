@@ -1,0 +1,144 @@
+<?php
+session_start();
+include 'db.php'; // your DB connection file
+
+// Admin login check
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: admin_login.php");
+    exit();
+}
+
+// Fetch Wedding Bookings
+$weddings = mysqli_query($conn, "SELECT * FROM wedding_bookings");
+
+// Fetch Workshops
+$workshops = mysqli_query($conn, "SELECT * FROM workshops");
+
+// Fetch Workshop Bookings (joined with workshop details)
+$workshop_bookings = mysqli_query($conn, "
+    SELECT wb.*, w.title AS workshop_title
+    FROM workshop_bookings wb
+    JOIN workshops w ON wb.workshop_id = w.id
+");
+
+// Fetch Users
+$users = mysqli_query($conn, "SELECT * FROM users");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        table {
+            width: 100%; border-collapse: collapse; margin: 20px 0;
+        }
+        th, td {
+            padding: 10px; border: 1px solid #ccc; text-align: left;
+        }
+        h2 { margin-top: 40px; }
+        button { padding: 5px 10px; margin-right: 5px; }
+        .actions { white-space: nowrap; }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <!-- Wedding Bookings -->
+    <h2>Wedding Bookings</h2>
+    <table>
+        <tr>
+            <th>ID</th><th>User</th><th>Date</th><th>Venue</th><th>Guests</th><th>Status</th><th>Actions</th>
+        </tr>
+        <?php while($row = mysqli_fetch_assoc($weddings)): ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['user_name'] ?></td>
+            <td><?= $row['wedding_date'] ?></td>
+            <td><?= $row['venue'] ?></td>
+            <td><?= $row['guest_count'] ?></td>
+            <td><?= $row['status'] ?></td>
+            <td class="actions">
+                <form method="post" action="admin_actions.php" style="display:inline;">
+                    <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                    <button name="approve_wedding">Approve</button>
+                    <button name="edit_wedding">Edit</button>
+                    <button name="delete_wedding" onclick="return confirm('Delete?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+    <!-- Created Workshops -->
+    <h2>Created Workshops</h2>
+    <table>
+        <tr>
+            <th>ID</th><th>Title</th><th>Date</th><th>Time</th><th>Location</th><th>Seats</th><th>Actions</th>
+        </tr>
+        <?php while($row = mysqli_fetch_assoc($workshops)): ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['title'] ?></td>
+            <td><?= $row['date'] ?></td>
+            <td><?= $row['time'] ?></td>
+            <td><?= $row['location'] ?></td>
+            <td><?= $row['seat_capacity'] ?></td>
+            <td class="actions">
+                <form method="post" action="admin_actions.php" style="display:inline;">
+                    <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                    <button name="edit_workshop">Edit</button>
+                    <button name="delete_workshop" onclick="return confirm('Delete?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+    <!-- Workshop Bookings -->
+    <h2>Workshop Seat Bookings</h2>
+    <table>
+        <tr>
+            <th>ID</th><th>User</th><th>Workshop</th><th>Seat No</th><th>Status</th><th>Actions</th>
+        </tr>
+        <?php while($row = mysqli_fetch_assoc($workshop_bookings)): ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['user_name'] ?></td>
+            <td><?= $row['workshop_title'] ?></td>
+            <td><?= $row['seat_number'] ?></td>
+            <td><?= $row['status'] ?></td>
+            <td class="actions">
+                <form method="post" action="admin_actions.php" style="display:inline;">
+                    <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                    <button name="approve_workshop_booking">Approve</button>
+                    <button name="delete_workshop_booking" onclick="return confirm('Delete?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+    <!-- Users -->
+    <h2>User Accounts</h2>
+    <table>
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Actions</th>
+        </tr>
+        <?php while($row = mysqli_fetch_assoc($users)): ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['name'] ?></td>
+            <td><?= $row['email'] ?></td>
+            <td class="actions">
+                <form method="post" action="admin_actions.php" style="display:inline;">
+                    <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                    <button name="edit_user">Edit</button>
+                    <button name="delete_user" onclick="return confirm('Delete user?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+</body>
+</html>

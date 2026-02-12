@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Booking | EventEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .package-card.featured {
+            border-top: 5px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-500 text-lg">EventEase</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-gray-500 hover:text-green-500 transition duration-300">Home</a>
+                    <a href="workshops.html" class="py-4 px-2 text-gray-500 hover:text-green-500 transition duration-300">Workshops</a>
+                    <a href="weddings.html" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold">Weddings</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="relative mb-12 h-64 rounded-lg overflow-hidden">
+            <img src="https://placehold.co/1920x1080" alt="Romantic wedding venue with floral arches and candlelit tables" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h1 class="text-4xl font-bold mb-4">Your Dream Wedding Awaits</h1>
+                    <p class="text-xl mb-6">Let us handle the details while you enjoy every moment.</p>
+                    <a href="#booking-form" class="bg-white text-green-700 hover:bg-gray-100 font-bold py-2 px-6 rounded-full transition duration-300">
+                        Book Your Wedding
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packages Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Wedding Packages</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="package-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Intimate Gathering</h3>
+                        <p class="text-sm text-gray-500 mb-4">Perfect for small, meaningful celebrations</p>
+                        <div class="text-4xl font-bold text-green-600 mb-2">$3,999</div>
+                        <p class="text-sm text-gray-500">Up to 50 guests</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Ceremony & reception setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Basic floral arrangements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Photography coverage (4 hours)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Catering for up to 50 guests</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-2 rounded hover:bg-gray-300 transition duration-300">Select Package</button>
+                </div>
+                
+                <!-- Package 2 (Featured) -->
+                <div class="package-card featured bg-white rounded-lg shadow-md p-6 transition-all duration-300 relative">
+                    <div class="absolute top-0 right-0 bg-green-600 text-white text-xs px-3 py-1 rounded-bl-lg">Popular</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Classic Celebration</h3>
+                        <p class="text-sm text-gray-500 mb-4">Our most popular package</p>
+                        <div class="text-4xl font-bold text-green-600 mb-2">$6,999</div>
+                        <p class="text-sm text-gray-500">Up to 150 guests</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Complete wedding planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Premium floral decorations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Photography coverage (8 hours)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Videography coverage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Catering for up to 150 guests</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Wedding cake</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition duration-300">Select Package</button>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Luxury Experience</h3>
+                        <p class="text-sm text-gray-500 mb-4">The ultimate wedding celebration</p>
+                        <div class="text-4xl font-bold text-green-600 mb-2">$12,999+</div>
+                        <p class="text-sm text-gray-500">200+ guests</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Full-service wedding planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom decor and floral design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Premium photography & videography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Gourmet catering</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Live band or DJ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Luxury venue selection</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-2 rounded hover:bg-gray-300 transition duration-300">Select Package</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section id="booking-form" class="bg-white rounded-lg shadow-md p-6 mb-16">
+            <h2 class="text-2xl font-bold mb-6">Wedding Booking Form</h2>
+            <form>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="couple-name" class="block text-gray-700 mb-2">Couple's Names</label>
+                        <input type="text" id="couple-name" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="John & Jane" required>
+                    </div>
+                    <div>
+                        <label for="wedding-date" class="block text-gray-700 mb-2">Wedding Date</label>
+                        <input type="date" id="wedding-date" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="guests" class="block text-gray-700 mb-2">Estimated Guests</label>
+                        <input type="number" id="guests" min="1" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="package" class="block text-gray-700 mb-2">Package Selection</label>
+                        <select id="package" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                            <option value="">Select a package</option>
+                            <option value="intimate">Intimate Gathering ($3,999)</option>
+                            <option value="classic">Classic Celebration ($6,999)</option>
+                            <option value="luxury">Luxury Experience ($12,999+)</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="special-requests" class="block text-gray-700 mb-2">Special Requests</label>
+                        <textarea id="special-requests" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="terms" class="mr-2" required>
+                    <label for="terms" class="text-gray-700">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded transition duration-300">
+                    Submit Wedding Booking Request
+                </button>
+            </form>
+        </section>
+
+        <!-- Venue Showcase -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Featured Venues</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://placehold.co/600x400" alt="Grand ballroom wedding venue with crystal chandeliers" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">The Grand Ballroom</h3>
+                        <p class="text-sm text-gray-600 mb-2">Capacity: 300 guests</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">From $2,500</span>
+                            <button class="text-sm text-green-600 hover:text-green-800 font-medium">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://placehold.co/600x400" alt="Garden wedding venue with floral arches and green hedges" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Enchanted Gardens</h3>
+                        <p class="text-sm text-gray-600 mb-2">Capacity: 200 guests</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">From $3,200</span>
+                            <button class="text-sm text-green-600 hover:text-green-800 font-medium">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://placehold.co/600x400" alt="Beachfront wedding venue with ocean
